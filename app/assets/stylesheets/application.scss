@@ -1,0 +1,8 @@
+@import "font-awesome-sprockets"; /* FontAwesome */
+@import "font-awesome";
+@import "reset"; /* _reset.scssを読み込む */
+@import "modules/section";
+@import "modules/messages"; 
+@import "./wrapper";
+@import "./side_bar";
+@import "./main_chat";

@@ -1,0 +1,4 @@
+/* widthやheightでボックスサイズの算出方法を指定し変わらなくする。 */
+* {
+  box-sizing: border-box;
+}

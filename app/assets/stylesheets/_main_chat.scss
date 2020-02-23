@@ -1,0 +1,159 @@
+
+.main_chat{
+  width: calc(100vw - 300px);
+
+  &__header{
+    height: 100px;
+    padding: 0px 40px;
+    background-color: $whitecolor;
+    border-bottom-style: solid;
+    border-bottom-color: #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    overflow: scroll;
+
+    &__left-box{
+      padding-top: 35px;
+      // background-color: yellow;
+    
+      &__group-name{
+        margin-bottom: 15px;
+        color: $blackcolor;
+        font-size: 20px;
+      }
+
+      &__member-list{
+        color: $graycolor;
+        // color: gray;
+        font-size: 12px;
+      }
+    }
+
+    &__edit-btn{
+      height: 40px;
+      width: 72px;
+      // background-color: yellow;
+      margin: 28px 0px;
+      padding: 12px 0px;
+      border: solid 1px $skybluecolor;
+      font-size: 16px;
+      line-height: 100%;
+      text-align: center;
+
+      a {
+        text-decoration: none;
+        color: $skybluecolor;
+      }
+    }
+  }
+
+  &__messages{
+    height: calc(100vh - 100px - 90px);
+    padding: 35px 40px;
+    background-color: #fafafa;
+    // yellowはテスト用
+    // background-color: yellow;
+    overflow: scroll;
+  
+    &__box{
+      height: calc(16px + 12px + 14px + 46px);
+      // skyblueはテスト用
+      // background-color: skyblue;
+
+      &__info{
+        height: calc(16px + 12px);
+        padding-bottom: 12px;
+        display: flex;
+      
+        &__user-name{
+          padding-right: 10px;
+          font-size: 16px;
+          color: $blackcolor;
+        }
+    
+        &__date{
+          font-size: 12px;
+          color: $graycolor;
+        }
+      }
+        
+      &__message{
+        height: 14px;
+        font-size: 14px;
+        color: #434A54;
+      }    
+    }
+
+    &__box2{
+      height: calc(16px + 12px + 14px + 46px);
+      // greenはテスト用
+      // background-color: green;
+
+      &__info{
+        height: calc(16px + 12px);
+        padding-bottom: 12px;
+        display: flex;
+      
+        &__user-name{
+          padding-right: 10px;
+          font-size: 16px;
+          color: $blackcolor;
+        }
+    
+        &__date{
+          font-size: 12px;
+          color: $graycolor;
+        }
+      }
+        
+      &__message{
+        height: 14px;
+        font-size: 14px;
+        color: #434A54;
+      }    
+    }
+  }
+
+  &__form{
+    height: 90px;
+    background-color: #d2d2d2;
+    padding: 15px 40px;
+    display: flex;
+
+    form{
+      display: flex;
+      width: 100%;
+
+      .input-box{
+        width: 100%;
+        position: relative;
+
+        &__text{
+          width: 100%;
+          line-height: 50px;
+          padding: 0 40px 0 10px;
+          border-style: none;
+        }
+
+        &__image{
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 20px;
+
+          &__file{
+            display: none;
+          }
+        }
+      }
+    }
+
+    .submit-btn{
+      margin-left: 15px;
+      padding: 0 20px;
+      background-color: $skybluecolor;
+      color: $whitecolor;
+      margin-bottom: 10px;
+    }
+  }
+}
