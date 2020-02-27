@@ -2,22 +2,22 @@
   .side_bar__header
     .side_bar__header__box
       %p.side_bar__header__box__user-name
-        masa
+        = current_user.name
       %ul.side_bar__header__box__menu
         %li.side_bar__header__box__menu__new-group
           = link_to "#" do
             = icon('fas', 'cog', class: "new-group")
         %li.side_bar__header__box__menu__edit-user
-          = link_to "#" do
+          = link_to edit_user_path(current_user) do
             = icon('fas', 'edit', class: "edit-user")
   .side_bar__groups
     .side_bar__groups__box
       %p.side_bar__groups__box__group-name
-        techcamp
+        グループ名
       %p.side_bar__groups__box__message
-        まだメッセージがありません
+        新着メッセージ
     .side_bar__groups__box2
       %p.side_bar__groups__box2__group-name
-        techcamp2
+        グループ名
       %p.side_bar__groups__box2__message
-        まだメッセージがありません2
+        新着メッセージ
