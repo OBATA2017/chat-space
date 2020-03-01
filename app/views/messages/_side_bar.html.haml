@@ -4,20 +4,29 @@
       %p.side_bar__header__box__user-name
         = current_user.name
       %ul.side_bar__header__box__menu
-        %li.side_bar__header__box__menu__new-group
-          = link_to "#" do
-            = icon('fas', 'cog', class: "new-group")
         %li.side_bar__header__box__menu__edit-user
+          = link_to new_group_path do
+            = icon('fas', 'edit', class: "new-group")
+        %li.side_bar__header__box__menu__new-group
           = link_to edit_user_path(current_user) do
-            = icon('fas', 'edit', class: "edit-user")
+            = icon('fas', 'cog', class: "edit-user")
+
   .side_bar__groups
     .side_bar__groups__box
-      %p.side_bar__groups__box__group-name
-        グループ名
-      %p.side_bar__groups__box__message
-        新着メッセージ
-    .side_bar__groups__box2
-      %p.side_bar__groups__box2__group-name
-        グループ名
-      %p.side_bar__groups__box2__message
-        新着メッセージ
+      - current_user.groups.each do |group|
+        .group
+          = link_to '#' do
+            %p.side_bar__groups__box__group-name
+              = group.name
+            %p.side_bar__groups__box__message
+              メッセージはまだありません。
+
+      -# %p.side_bar__groups__box__group-name
+      -#   グループ名
+      -# %p.side_bar__groups__box__message
+      -#   新着メッセージ
+    -# .side_bar__groups__box2
+    -#   %p.side_bar__groups__box2__group-name
+    -#     グループ名
+    -#   %p.side_bar__groups__box2__message
+    -#     新着メッセージ
