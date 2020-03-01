@@ -62,19 +62,19 @@
       }
     }
 
-    &__box2{
-      height: calc(20px + 15px + 5px + 11px + 40px);
-      width: 100%;
+    // &__box2{
+    //   height: calc(20px + 15px + 5px + 11px + 40px);
+    //   width: 100%;
       
-      &__group-name{
-        font-size: 15px;
-        margin-bottom: 5px;
-      }
+    //   &__group-name{
+    //     font-size: 15px;
+    //     margin-bottom: 5px;
+    //   }
 
-      &__message{
-        font-size: 11px;
-        margin-bottom: 40px;
-      }
-    }
+    //   &__message{
+    //     font-size: 11px;
+    //     margin-bottom: 40px;
+    //   }
+    // }
   }
 }
