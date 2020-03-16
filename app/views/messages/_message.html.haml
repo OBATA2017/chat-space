@@ -1,0 +1,19 @@
+.message-box
+  .message-box__info
+    %p.message-box__info__user-name
+      = message.user.name
+    %p.message-box__info__date
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  %p.message-box__message
+    - if message.content.present?
+      = message.content
+    = image_tag message.image.url, class: 'image' if message.image.present?
+
+-# .main_chat__messages__box
+-#       .main_chat__messages__box__info
+-#         %p.main_chat__messages__box__info__user-name
+-#           masamasa
+-#         %p.main_chat__messages__box__info__date
+-#           2020/02/22(Sat) 20:40:55
+-#       %p.main_chat__messages__box__message
+-#         = render @messages

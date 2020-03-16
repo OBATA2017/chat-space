@@ -43,40 +43,13 @@
     }
   }
 
-  &__messages{
+  .messages{
     height: calc(100vh - 100px - 90px);
     padding: 35px 40px;
     background-color: #fafafa;
     overflow: scroll;
   
-    &__box{
-      height: calc(16px + 12px + 14px + 46px);
-
-      &__info{
-        height: calc(16px + 12px);
-        padding-bottom: 12px;
-        display: flex;
-      
-        &__user-name{
-          padding-right: 10px;
-          font-size: 16px;
-          color: $blackcolor;
-        }
-    
-        &__date{
-          font-size: 12px;
-          color: $graycolor;
-        }
-      }
-        
-      &__message{
-        height: 14px;
-        font-size: 14px;
-        color: #434A54;
-      }    
-    }
-
-    &__box2{
+    .message-box{
       height: calc(16px + 12px + 14px + 46px);
 
       &__info{
@@ -104,13 +77,13 @@
     }
   }
 
-  &__form{
+  .form{
     height: 90px;
     background-color: #d2d2d2;
     padding: 15px 40px;
     display: flex;
 
-    form{
+    .new_message{
       display: flex;
       width: 100%;
 

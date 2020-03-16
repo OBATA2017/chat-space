@@ -2,35 +2,38 @@
   .main_chat__header
     .main_chat__header__left-box
       %p.main_chat__header__left-box__group-name
-        test
-      %p.main_chat__header__left-box__member-list
-        Member : masa
+        = @group.name
+      %ul.main_chat__header__left-box__member-list
+        Member: 
+        -# = @groups.each do |group|
+        -#   = group.users
+
+        -# %li.list
+        -#   = link_to new_group_path do
+        -#     = @group.users
     .main_chat__header__edit-btn
       = link_to "#" do
         Edit
-  .main_chat__messages
-    .main_chat__messages__box
-      .main_chat__messages__box__info
-        %p.main_chat__messages__box__info__user-name
-          masamasa
-        %p.main_chat__messages__box__info__date
-          2020/02/22(Sat) 20:40:55
-      %p.main_chat__messages__box__message
-        test
-    .main_chat__messages__box2
-      .main_chat__messages__box2__info
-        %p.main_chat__messages__box2__info__user-name
-          masamasamasa
-        %p.main_chat__messages__box2__info__date
-          2020/02/24(Mon) 21:00:55
-      %p.main_chat__messages__box2__message
-        test2
-  .main_chat__form
+
+  .messages
+    = render @messages
+    -# = render partial: 'message', locals: {message: @messages}
+
+  .form
     %form.new_message
-      .input-box
-        %input{type: "text", class: "input-box__text", placeholder: "type a messege"}
-        %label{class: "input-box__image"}
-          = icon('fas', 'image')
-          %input{type: "file", class: "input-box__image__file"}
-      %input{type: "submit", class: "submit-btn"}
-      
+      = form_for [@group, @message] do |f|
+        .input-box
+          = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+          = f.label :image, class: 'input-box__image' do
+            = icon('fas', 'image')
+            = f.file_field :image, class: 'input-box__image__file'
+        = f.submit 'Send', class: 'submit-btn'
+
+  -# .main_chat__form
+  -#   %form.new_message
+  -#     .input-box
+  -#       %input{type: "text", class: "input-box__text", placeholder: "type a messege"}
+  -#       %label{class: "input-box__image"}
+  -#         = icon('fas', 'image')
+  -#         %input{type: "file", class: "input-box__image__file"}
+  -#     %input{type: "submit", class: "submit-btn"}

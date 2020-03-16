@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
   
+  # ルーティングで省いたためいらない？
   def index
   end
 
